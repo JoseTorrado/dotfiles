@@ -1,0 +1,21 @@
+#!/bin/bash
+
+# A bash script that will use the `ditto` command to zip files
+# This will mimic the zip functionality that Finder uses in the `Compress` command when right clicking
+
+# If no argument is given, zip all files in folder as `root.zip`
+if [[ $# -eq 0 ]]; then
+	ditto -c -k --sequesterRsrc . root.zip
+fi
+
+# If argument is given, zip files with the given file name
+if [[ $# -eq 1 ]]; then
+	filename=$1
+	ditto -c -k --sequesterRsrc . $filename
+fi
+
+# If more than one argument is passed, throw an error
+if [[ $# -gt 1 ]]; then
+	echo "Please provide only ONE filename for the zip file"
+	exit 1
+fi

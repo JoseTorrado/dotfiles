@@ -1,0 +1,4 @@
+
+#!/bin/bash
+
+open -a Safari https://iam.ford.com/IdentityManagement/aspx/groups/MyMemberships.aspx

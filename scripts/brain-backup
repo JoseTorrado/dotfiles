@@ -1,0 +1,13 @@
+#!/bin/bash
+
+BACKUPS_DESTINATION="/Volumes/JET"
+
+# format:
+# rsync -a --delete --quiet /path/to/backup /location/of/backup
+
+# stop the script if an error occurs
+set -e
+
+rsync -a --delete --quiet --exclude="{"/home/*/.cache/*"}" $HOME/second-brain $BACKUPS_DESTINATION
+
+echo "Made backups of second-brain on: $(date)" >>$HOME/backup.log

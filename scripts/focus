@@ -1,0 +1,12 @@
+#!/bin/bash
+
+timer 45m && terminal-notifier -message 'Pomodoro' \
+	-title 'Focus timer has ended - Take a break!' \
+	-appIcon '~/Downloads/dog.png' \
+	-sound Crystal
+
+# pomo start
+#
+# if [[ $(dndstatus) = "Do Not Disturb is turned Off." ]]; then
+# 	dnd
+# fi
