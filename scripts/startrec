@@ -2,9 +2,9 @@
 
 gsed -i 's/size = 16/size = 30/g' /Users/jtorrad1/dotfiles/alacritty.toml
 
-cat <<EOF
-Recording checklist:
-- Check if microphone is on
-- Turn on Keycastr
-- Verify if recording proper screen
-EOF
+# cat <<EOF
+# Recording checklist:
+# - Check if microphone is on
+# - Turn on Keycastr
+# - Verify if recording proper screen
+# EOF

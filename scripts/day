@@ -3,31 +3,26 @@
 today=$(date +"%Y-%m-%d")
 tomorrow=$(date -v +1d +"%Y-%m-%d")
 yesterday=$(date -v -1d +"%Y-%m-%d")
-file="$SECOND_BRAIN/periodic-notes/daily-notes/$today.md"
+file="$SECOND_BRAIN/Periodic Notes/Daily/$today.md"
 
 cd "$SECOND_BRAIN" || exit
 
 new_note() {
-	touch "$file"
+  touch "$file"
 
-	# Format the file with the daily template
-	cat <<EOF >"$file"
-# $today
+  # Format the file with the daily template
+  cat <<EOF >"$file"
 
-[[$yesterday]] - [[$tomorrow]]
+## [[$yesterday]] - [[$tomorrow]]
 
-## Intention
+## Daily Deeds & Rituals
 
-What do I want to achieve today and tomorrow?
-
-## Tracking
-
-- [ ] Stretch
-- [ ] Meditation
-- [ ] Fitness Dailies
-- [ ] Walk
+- [ ] Study 3 hours for CKA
+- [ ] Produce 1 piece of content
+- [ ] Meditate for 20 minutes
 
 ## Log
+
 EOF
 
 }
@@ -35,8 +30,8 @@ EOF
 # If the daily note does not exist, create a new one.
 # this uses the test command with the -f flag.
 if [ ! -f "$file" ]; then
-	echo "File does not exist, creating new daily note."
-	new_note
+  echo "File does not exist, creating new daily note."
+  new_note
 fi
 
 # Open the daily note at the bottom of the file in insert mode and run NoNeckPain to make it center

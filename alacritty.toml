@@ -16,4 +16,4 @@ x = 7
 y = 0
 
 [shell]
-program = "/bin/bash"
+program = "/opt/homebrew/bin/bash"

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Function to simulate key press using AppleScript
+simulate_key_press() {
+  osascript -e 'tell application "System Events" to key code 96 using shift down'
+  # Key code 96 corresponds to F15 on Mac
+}
+
+# Main loop
+while true; do
+  simulate_key_press
+  sleep 59
+done
