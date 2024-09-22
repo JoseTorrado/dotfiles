@@ -9,7 +9,7 @@ return {
         -- pyright = {},
         bashls = {},
         -- gopls = {},
-        bicep = {},
+        -- bicep = {},
         yamlls = {},
         marksman = {},
         powershell_es = {},

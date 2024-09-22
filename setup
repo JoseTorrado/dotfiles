@@ -6,6 +6,7 @@
 
 # brew packages Mac
 # amethyst fzf nvim exa hugo bash-completion@2 newsboat kubectl
+brew install amethyst fzf nvim hugo bash-completion@2 lazygit go ripgrep
 
 # ubuntu packages apt
 # ripgrep gh
@@ -41,7 +42,7 @@ mkdir -p "$XDG_CONFIG_HOME"/k9s
 
 # ln -s ./.amethyst.yml "$HOME"/.amethyst.yml
 ln -sf "$PWD/alacritty.toml" "$XDG_CONFIG_HOME"/alacritty/alacritty.toml
-ln -sf "$PWD/k9s/skin.yml" "$XDG_CONFIG_HOME"/k9s/skin.yml
+#ln -sf "$PWD/k9s/skin.yml" "$XDG_CONFIG_HOME"/k9s/skin.yml
 ln -sf "$PWD/.bash_profile" "$HOME"/.bash_profile
 ln -sf "$PWD/.bashrc" "$HOME"/.bashrc
 ln -sf "$PWD/.inputrc" "$HOME"/.inputrc

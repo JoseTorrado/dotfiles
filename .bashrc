@@ -2,6 +2,12 @@
 # ~/.bashrc
 #
 
+# Needed for sourcing brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# For something... that was in bash profile
+export XDG_CONFIG_HOME="$HOME"/.config
+
 # if not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
@@ -18,13 +24,13 @@ export editor=nvim
 # config
 # export browser="firefox"
 
-# directories
+# directories (They need to be in capital case now)
 export REPOS="$HOME/Documents/github/"
 # export gituser="josetorrado"
 # export ghrepos="$repos/"
-export dotfiles="$home/dotfiles"
-export lab="$REPOS/lab"
-export scripts="$dotfiles/scripts"
+export DOTFILES="$REPOS/dotfiles"
+export LAB="$REPOS/lab"
+export SCRIPTS="$DOTFILES/scripts"
 # export icloud="$home/icloud"
 export SECOND_BRAIN="$HOME/second-brain"
 # export goprivate="github.com/$gituser/*,gitlab.com/$gituser/*"
@@ -42,7 +48,7 @@ unset mailcheck
 #path="${path:+${path}:}"$scripts":"$home"/.local/bin:$home/dotnet" # appending
 #export path="${krew_root:-$home/.krew}/bin:$path"
 
-export path="$path:$scritps"
+export PATH="$PATH:$SCRIPTS"
 
 # ~~~~~~~~~~~~~~~ history ~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -155,7 +161,7 @@ alias ~="cd ~"
 alias lab='cd $LAB'
 alias cks='cd $LAB/kubernetes/cks/'
 alias alab='cd $GHREPOS/azure-lab'
-alias dot='cd $HOME/dotfiles'
+alias dot='cd $REPOS/dotfiles'
 alias repos='cd $REPOS'
 alias ghrepos='cd $GHREPOS'
 alias cdgo='cd $GHREPOS/go/'

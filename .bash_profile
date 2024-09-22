@@ -23,10 +23,3 @@ fi
 
 export XDG_CONFIG_HOME="$HOME"/.config
 
-### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
-export PATH="/Users/jtorrad1/.rd/bin:$PATH"
-### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
-
-# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export PATH="/opt/homebrew/opt/postgresql@15/bin:$PATH"
-. "$HOME/.cargo/env"
