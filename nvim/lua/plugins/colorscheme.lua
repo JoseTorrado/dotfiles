@@ -1,6 +1,6 @@
 return {
   -- add gruvbox
-  { "wittyjudge/gruvbox-material.nvim" },
+  { "f4z3r/gruvbox-material.nvim" },
 
   -- Configure LazyVim to load gruvbox
   {
