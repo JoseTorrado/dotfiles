@@ -10,6 +10,10 @@ vim.keymap.set(
   { desc = "Disable completion" }
 )
 
+-- Obsidian
+-- Go to Daily Note
+vim.keymap.set("n", "<leader>t", "<cmd>ObsidianToday<cr>", { desc = "Open Daily Note" })
+
 -- map esc to jk for laptop use
 -- vim.keymap.set("i", "jk", "<Esc>", { desc = "Escape jk" })
 
