@@ -1,9 +1,20 @@
 #!/bin/bash
 
-timer 45m && terminal-notifier -message 'Pomodoro' \
-	-title 'Focus timer has ended - Take a break!' \
-	-appIcon '~/Downloads/dog.png' \
-	-sound Crystal
+# Default time in minutes
+default_time=45
+
+# Check if an argument was provided
+if [ $# -eq 1 ] && [[ $1 =~ ^[0-9]+$ ]]; then
+  timer_duration=$1
+else
+  timer_duration=$default_time
+fi
+
+# Run the timer and send notification
+timer ${timer_duration}m && terminal-notifier -message 'Pomodoro' \
+  -title 'Focus timer has ended - Take a break!' \
+  -appIcon '~/Downloads/dog.png' \
+  -sound Crystal
 
 # pomo start
 #
