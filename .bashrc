@@ -214,7 +214,7 @@ complete -f -F _dotnet_bash_complete dotnet
 alias gp='git pull'
 alias gs='git status'
 alias lg='lazygit'
-alias gh='gh pr create --web'
+alias pr='gh pr create --web'
 
 # ricing
 alias et='v ~/.config/awesome/themes/powerarrow/theme-personal.lua'
