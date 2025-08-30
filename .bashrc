@@ -12,8 +12,8 @@ set -o vi
 bind -x '"\C-l":clear'
 # ~~~~~~~~~~~~~~~ environment variables ~~~~~~~~~~~~~~~~~~~~~~~~
 
-export visual=nvim
-export editor=nvim
+export VISUAL=nvim
+export EDITOR=nvim
 
 # config
 # export browser="firefox"
@@ -162,6 +162,11 @@ alias cdgo='cd $GHREPOS/go/'
 alias ex='cd $REPOS/github.com/mischavandenburg/go/Exercism/'
 alias rwdot='cd $REPOS/github.com/rwxrob/dot'
 
+# Ford Repos
+alias cicd='cd $REPOS/aim-deo-cicd/'
+alias aim='cd $REPOS/aim-deo-m1-aim-pae/'
+alias bhm='cd $REPOS/aim-deo-gcp-bhm-prog/'
+
 alias avm='cd $REPOS/github.com/Azure/bicep-registry-modules'
 alias d='cd $REPOS/delegate'
 
@@ -212,9 +217,11 @@ complete -f -F _dotnet_bash_complete dotnet
 
 # git
 alias gp='git pull'
+alias gpr='git pull --rebase'
 alias gs='git status'
 alias lg='lazygit'
 alias pr='gh pr create --web'
+alias ge='git commit --allow-empty -m "empty commit"'
 
 # ricing
 alias et='v ~/.config/awesome/themes/powerarrow/theme-personal.lua'
@@ -266,6 +273,11 @@ alias kcp='kubectl config use-context admin@homelab-production'
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
 # search for a file with fzf and open it in vim
 alias vf='v $(fp)'
+# search for a directory and cd into it
+function cdf() {
+  local dir
+  dir=$(find . -maxdepth 1 -type d -not -path "." 2>/dev/null | fzf +m) && cd "$dir"
+}
 
 # sourcing
 #source "$HOME/.privaterc"
@@ -311,3 +323,4 @@ export SPARK_LOCAL_IP="127.0.0.1"
 export PYSPARK_DRIVER_PYTHON=jupyter
 export PYSPARK_DRIVER_PYTHON_OPTS='lab'
 export PYSPARK_PYTHON=python3
+. "$HOME/.cargo/env"
